@@ -13,7 +13,7 @@ if (isset($_POST['signup'])) {
     $_SESSION['email']     = $email;
 
     $conn = $pdo->connect();
-
+ 
     $now = date('Y-m-d');
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);

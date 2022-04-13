@@ -101,7 +101,6 @@ function getData($model)
 </head>
 
 <body>
-
     <?php
     include './include/header.php';
     ?>
@@ -142,7 +141,5 @@ function getData($model)
     <?php
     include './include/footer.php';
     ?>
-
 </body>
-
 </html>

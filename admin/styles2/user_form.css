@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* !UNIVERSAL STYLES */
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  background-color: #fff;
+  margin-top: 2rem;
+  padding: 0 10px;
+  /* text-align: center; */
+}
+
+.flex {
+  /* display: flex; */
+  max-width: 50rem;
+  /* height: 60rem; */
+  background: white;
+  margin: 13rem auto;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.125),
+    0px 0px 50px rgba(0, 0, 0, 0.125);
+  border-radius: 30px;
+  gap: 1.5rem;
+  justify-self: center;
+  padding: 2rem;
+}
+
+.image {
+  flex-basis: 50%;
+}
+
+.image img {
+  max-width: 100%;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.content {
+  flex-basis: 50%;
+}
+
+.registerForm {
+  border-top-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+
+.title {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.ip {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.ip label {
+  width: 10rem;
+  color: black;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 1.3rem;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border: 1px solid #da8777;
+}
+
+.bt {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.action1 a {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background: rgb(94, 185, 178);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  width: 100%;
+}
+
+
+
+.action1:hover {
+  color: white;
+  background-color: #757575;
+}
+
+.terms {
+  text-align: center;
+  font-size: 1rem;
+}
+.terms p {
+  margin: 1rem 0 0.5rem 0;
+  color: rgb(235, 168, 168);
+}
+
+.sign-in {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.sign-in p {
+  margin: 1rem 0 0.5rem 0;
+}
+.sign-in a {
+  color: black;
+}

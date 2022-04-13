@@ -1,0 +1,141 @@
+<!-- <?php -->
+<!-- include './include2/session.php'; -->
+<!-- ?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+
+    <link rel="stylesheet" href="./adminhome.css">
+
+</head>
+
+<!-- !HEADER COMPONENT {SIDEBAR} -->
+<header class="header">
+
+    <div>
+        <span></span>
+    </div>
+    
+    <div>
+        <h1 class="welcome">Welcome Admin</h1>
+    </div>
+
+    <div class="nav-button">
+
+        <div class="auth-btn">
+            <button class="logout"> <a href="./logout.php">Log Out</a></button>
+        </div>
+
+    </div>
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text logo-text">G Car Rentals</span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                        class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x">
+                        <g class="fa-group">
+                            <path fill="currentColor"
+                                d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
+                                class="fa-secondary"></path>
+                            <path fill="currentColor"
+                                d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
+                                class="fa-primary"></path>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img src="./svg/01user.svg" height="50rem" width="50rem" alt="">
+                    <span class="link-text">
+                        Users
+                        <!-- <?php
+                        if (isset($_SESSION['admin'])) {
+                            echo '
+                                  <span class="link-text"> <a href="#" >' .  $user['first_name'] . '</a> </span>
+                                ';
+                        } else {
+                            echo '<span class="link-text">User</span>';
+                        }
+                        ?> -->
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img src="./svg/car.svg" height="50rem" width="50rem" alt="">
+                    <span class="link-text">Fleet</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img src="./svg/05chat.svg" height="50rem" width="50rem" alt="">
+                    <span class="link-text">Comments</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<body>
+
+    <!-- <?php
+            include './Test2/admin/include2/header2.php';
+            ?> -->
+
+            <!-- !DASHBOARD CONTENT -->
+    <div id="page-wrap">
+        <section class="directory">
+            <h2 class="directory-title">Dashboard</h2>
+            
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <img src="./svg/directory.svg" alt="">
+                <li class="active">Dashboard</li>
+            </ol>
+        </section>
+
+        <div class="row">
+
+            <div class="container-sales">
+                <span class="value">Ksh. 14.97k</span>
+                <span class="content">Total Sales</span>
+            </div>
+
+            <div class="container-products">
+                <span class="value">23</span>
+                <span class="content">Number of Car Brands</span>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="container-users">
+                <span class="value">2</span>
+                <span class="content">Number of Users</span>
+            </div>
+
+            <div class="container-categories">
+                <span class="value">23</span>
+                <span class="content">Number of Products</span>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

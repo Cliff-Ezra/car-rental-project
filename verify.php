@@ -15,8 +15,8 @@ if (isset($_POST['login'])) {
         if ($row['numrows'] > 0) {
             if (password_verify($password, $row['password'])) {
                 $_SESSION['user'] = $row['user_id'];
-                var_dump($_SESSION);
-                echo "Hello";
+                // var_dump($_SESSION);
+                // echo "Hello";
             } else {
                 $_SESSION['error'] = 'Incorrect password';
             }
