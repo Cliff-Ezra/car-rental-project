@@ -115,6 +115,26 @@ function getData($sql)
 
     </div>
 
+    <div class="main">
+
+        <?php
+        $sqlFour = "SELECT * FROM rental.categories WHERE category_id = 8";
+        getData($sqlFour);
+        ?>
+
+        <?php
+        $sqlFive = "SELECT * FROM rental.categories WHERE category_id = 9";
+        getData($sqlFive);
+        ?>
+
+        <?php
+        $sqlSix = "SELECT * FROM rental.categories WHERE category_id = 10";
+        getData($sqlSix);
+        ?>
+
+    </div>
+
+
     <!-- !CONTACT US -->
     <div class="customer-container">
 

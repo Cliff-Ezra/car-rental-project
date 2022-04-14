@@ -11,7 +11,7 @@ include './include2/session.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Edit Form</title>
 
-    <link rel="stylesheet" href="./styles2/user_form.css">
+    <link rel="stylesheet" href="./styles2/edit_form.css">
     <link href="https://fonts.goC:\xampp\htdocs\main\Test2\landing.phpogleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 
 </head>
@@ -68,7 +68,7 @@ include './include2/session.php';
                             </div>
 
                             <div class='bt'>
-                                <button class='action1' type='submit' name='edit'>Edit User</button>
+                                <input class='action1' type='submit' value='Edit User' name='edit'>    
                             </div>  
 
                         </form>

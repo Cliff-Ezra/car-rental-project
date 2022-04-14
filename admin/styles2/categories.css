@@ -1,0 +1,106 @@
+/* !Directory Styles */
+#page-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.directory {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: black;
+  text-transform: uppercase;
+}
+
+.directory {
+  margin-top: 3rem;
+}
+
+.directory .directory-title {
+  margin-left: 4.4rem;
+}
+
+.directory .breadcrumb {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 1.2rem;
+  margin-right: 4rem;
+}
+
+.directory .breadcrumb a {
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.directory .breadcrumb li {
+  list-style: none;
+}
+
+.directory .breadcrumb img {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+}
+
+/* !Table Styles */
+table {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 2px 15px rgba(14, 10, 10, 0.644);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+td,
+th {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+button {
+  background: rgb(109, 189, 109);
+  border-radius: 10px;
+  padding: 0.1rem 1rem;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+th {
+  background-color: rgb(188, 243, 243);
+  color: black;
+  font-family: "Open Sans", Sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+tr {
+  width: 100%;
+  background-color: #fafafa;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(171, 170, 223);
+}
+
+.empty {
+  margin-top: 100vh;
+  height: 200px;
+}

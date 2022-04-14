@@ -43,7 +43,6 @@ if (isset($_POST['edit'])) {
     }
 } else {
     // echo $enter->getMessage();
-    echo "Couldnt update";
+    echo "Could'nt update";
 }
 header('location: ./users.php');
-?>
