@@ -9,9 +9,9 @@ include './include2/session.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
+    <title>Models</title>
 
-    <link rel="stylesheet" href="./styles2/categories.css">
+    <link rel="stylesheet" href="./styles2/models.css">
     <link rel="stylesheet" href="./styles2/header2.css">
     <link rel="stylesheet" href="./style.css">
 
@@ -25,20 +25,20 @@ include './include2/session.php';
 
     <div id="page-wrap">
         <section class="directory">
-            <h2 class="directory-title">Categories</h2>
+            <h2 class="directory-title">Models</h2>
 
             <ol class="breadcrumb">
                 <li> <a href="./adminhome.php">Home</a> </li>
                 <img src="./svg/directory.svg" alt="">
                 <li> <a href="./fleet.php">Fleet</a> </li>
                 <img src="./svg/directory.svg" alt="">
-                <li class="active">Categories</li>
+                <li class="active">Models</li>
             </ol>
         </section>
     </div>
 
     <div class="add-btn">
-        <button> <a href="./categoryadd_form.php">Add Category</a> </button>
+        <button> <a href="./modeladd_form.php">Add Model</a> </button>
     </div>
 
     <div class="table">
@@ -46,12 +46,16 @@ include './include2/session.php';
         <form action="./">
             <table>
                 <tr>
+                    <th>Model ID</th>
                     <th>Category ID</th>
-                    <th>Car Category</th>
-                    <th>Photo Path</th>
-                    <th>Description</th>
-                    <th>Edit Category</th>
-                    <th>Delete Category</th>
+                    <th>Name</th>
+                    <th>Passenger No.</th>
+                    <th>Transmission</th>
+                    <th>Door No.</th>
+                    <th>Availability</th>
+                    <th>Price</th>
+                    <th>Edit Model</th>
+                    <th>Delete Model</th>
                 </tr>
 
 
@@ -60,25 +64,29 @@ include './include2/session.php';
                 $conn = $pdo->connect();
 
                 try {
-                    $stmt = $conn->prepare("SELECT * FROM categories");
+                    $stmt = $conn->prepare("SELECT * FROM models");
                     $stmt->execute();
                     foreach ($stmt as $row) {
 
-                        $_SESSION['category_id'] = $row['category_id'];
+                        $_SESSION['model_id'] = $row['model_id'];
 
                         echo "
                 <tr>
-                    <td> $row[category_id]</td>
+                    <td> $row[model_id]</td>
+                    <td> $row[category_id] </td>
                     <td> $row[name] </td>
-                    <td> $row[photo] </td>
-                    <td> $row[description] </td>
+                    <td> $row[s1_passenger_no] </td>
+                    <td> $row[s2_transmission] </td>
+                    <td> $row[s3_door_no] </td>
+                    <td> $row[availability] </td>
+                    <td> $row[price] </td>
                     
-                    <form action='categoryedit_form.php?category_id=" . $row['category_id'] . "' method='post'>
-                    <td> <button class='btn-delete' data-id= '$row[category_id]' name='edit'> <a href='categoryedit_form.php?category_id=" . $row['category_id'] . "'> Edit </a> </button> </td>
+                    <form action='modeledit_form.php?model_id=" . $row['model_id'] . "' method='post'>
+                    <td> <button class='btn-delete' data-id= '$row[model_id]' name='edit'> <a href='modeledit_form.php?model_id=" . $row['model_id'] . "'> Edit </a> </button> </td>
                     </form>
 
-                    <form action='userdelete.php?category_id=" . $row['category_id'] . "' method='post'>
-                    <td> <button class='btn-delete' data-id= '$row[category_id]' name='delete'> <a href='userdelete.php?category_id=" . $row['category_id'] . "'> Delete</a></button> </td>
+                    <form action='modeldelete.php?model_id=" . $row['model_id'] . "' method='post'>
+                    <td> <button class='btn-delete' data-id= '$row[model_id]' name='delete'>Delete</a></button> </td>
                     </form>
 
                 </tr>
