@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
 
         if ($row['numrows'] > 0) {
             if (password_verify($password, $row['password'])) {
-                $_SESSION['user'] = $row['user_id'];
+                $_SESSION['user'] = $row['user_id'];    // !USER id and session id
                 // var_dump($_SESSION);
                 // echo "Hello";
             } else {

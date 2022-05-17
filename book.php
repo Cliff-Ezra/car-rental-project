@@ -45,11 +45,7 @@ function getData($model)
                         <img src='./svg/car.svg' alt=''>
                         <p>Number of cars available: " . $row['availability'] . "</p>
                     </div>
-                    <div class='bt'>
-                        <a href='#'>
-                            <button class='action1'>Book now</button>
-                        </a>
-                </div>
+
             </div>
         ";
         }
@@ -76,6 +72,7 @@ function getData($model)
 
 <body>
 
+    <!-- <button class='action1'>Book now</button> -->
     <?php
     include './include/header.php';
     ?>
@@ -84,6 +81,47 @@ function getData($model)
     $model = "SELECT * FROM rental.models WHERE models.model_id = ':modelID';";
     getData($model);
     ?>
+
+
+    <div class="content">
+
+        <form action="./confirm.php" method="post" class="registerForm">
+
+            <br>
+
+            <div class="ip">
+                <label>Number of Days</label>
+                <input type="days" class="input" id="days" name="days" placeholder="Number of days to Rent" />
+                <br>
+            </div>
+
+            <br>
+
+            <div class="ip">
+                <label>Date of Pick up</label>
+                <input type="date" class="input" id="calender" name="date" />
+            </div>
+
+            <div class="bt">
+                <input class="action1" type="submit" value="Book Now" name="booking">
+            </div>
+
+            <?php
+
+            $modelID = $_GET['model'];
+            echo "
+            <input type='hidden' value=" . $modelID . " name='model_id' id='hiddenValue'>
+            ";
+
+            echo "
+            <input type='hidden' value=" . $user['first_name'] . " name='first_name' id='hiddenValue'>
+            "
+            ?>
+
+
+        </form>
+
+    </div>
 
     <!-- !BOOKING DETAILS -->
     <div class="booking-details">
@@ -272,14 +310,14 @@ function getData($model)
     <div class="divider2"></div>
 
     <div class="form-wrapper">
-        <form action="" class="review-form">
+        <form action="./bookreview.php" class="review-form" method="post">
             <label for="comment" class="comment-label">Comment</label>
             <textarea name="comment" id="comment" cols="50" rows="10" class="comment-area"></textarea>
 
             <div class="details">
                 <div class="align">
-                    <label for="name" class="comment-label">Name*</label>
-                    <input type="text" name="name" id="name" placeholder="Please Write Your Full Name" required class="input">
+                    <label for="full_name" class="comment-label">Name*</label>
+                    <input type="text" name="full_name" id="full_name" placeholder="Please Write Your Full Name" required class="input">
                 </div>
 
                 <div class="align">
@@ -294,7 +332,7 @@ function getData($model)
             </div>
 
             <div class="bt">
-                <input class="action2" type="submit" value="Review" name="review">
+                <input class="action2" type="submit" value="Review" name="post">
             </div>
         </form>
     </div>

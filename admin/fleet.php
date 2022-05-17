@@ -44,7 +44,7 @@ include './include2/session.php';
             </div>
 
             <div class="container-brand">
-                <span class="content">Car Brands</span>
+                <span class="content">Car Models</span>
                 <a href="./models.php">
                     <img src="./svg/brand.svg" alt="" height="200px">
                 </a>

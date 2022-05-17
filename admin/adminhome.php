@@ -38,13 +38,19 @@ include './include2/session.php';
         <div class="row">
 
             <div class="container-sales">
-                <span class="value">Ksh. 14.97k</span>
+                <span class="value">Ksh. 35,800k</span>
                 <span class="content">Total Sales</span>
             </div>
 
             <div class="container-products">
-                <span class="value">23</span>
-                <span class="content">Number of Car Brands</span>
+                <?php
+                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM categories");
+                $stmt->execute();
+                $row = $stmt->fetch();
+
+                echo "<span class='value'>" . $row['numrows'] . "</span>"
+                ?>
+                <span class="content">Number of Car Categories</span>
             </div>
 
         </div>
@@ -52,13 +58,25 @@ include './include2/session.php';
         <div class="row">
 
             <div class="container-users">
-                <span class="value">2</span>
+                <?php
+                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM user");
+                $stmt->execute();
+                $row = $stmt->fetch();
+
+                echo "<span class='value'>" . $row['numrows'] . "</span>"
+                ?>
                 <span class="content">Number of Users</span>
             </div>
 
             <div class="container-categories">
-                <span class="value">23</span>
-                <span class="content">Number of Products</span>
+                <?php
+                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM models");
+                $stmt->execute();
+                $row = $stmt->fetch();
+
+                echo "<span class='value'>" . $row['numrows'] . "</span>"
+                ?>
+                <span class="content">Number of Car Models</span>
             </div>
 
         </div>

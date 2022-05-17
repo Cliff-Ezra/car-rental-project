@@ -117,14 +117,14 @@ function getData($sql)
 
     <div class="main">
 
-        <?php
-        $sqlFour = "SELECT * FROM rental.categories WHERE category_id = 8";
-        getData($sqlFour);
-        ?>
+        <!-- <?php
+                // $sqlFour = "SELECT * FROM rental.categories WHERE category_id = 8";
+                // getData($sqlFour);
+                ?> -->
 
         <?php
-        $sqlFive = "SELECT * FROM rental.categories WHERE category_id = 9";
-        getData($sqlFive);
+        // $sqlFive = "SELECT * FROM rental.categories WHERE category_id = 9";
+        // getData($sqlFive);
         ?>
 
         <?php
