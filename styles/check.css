@@ -12,17 +12,17 @@
 
 /* *Targeting a sudo element on the element with the scrollbar */
 body::-webkit-scrollbar {
-  width: 0.6rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: black;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: grey;
-  border-radius: 1rem;
-}
+    width: 0.6rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 1rem;
+  }
 
 body {
   color: black;
@@ -607,7 +607,7 @@ body {
 }
 
 .content {
-  flex-basis: 50%;
+  flex-basis: 90%;
 }
 
 .registerForm {
@@ -637,10 +637,17 @@ body {
   font-size: 1.3rem;
 }
 
+legend {
+  /* width: 40%; */
+  color: black;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
 .input {
   width: 100%;
   outline: none;
-  border: 1px solid #d5dbd9;
+  border-bottom: 1px solid #d5dbd9;
   font-size: 1.3rem;
   padding: 8px 10px;
   border-radius: 5px;

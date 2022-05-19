@@ -9,6 +9,20 @@
   padding: 0;
 }
 
+/* *Targeting a sudo element on the element with the scrollbar */
+body::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 1rem;
+}
+
 body {
   color: black;
   background-color: #fff;

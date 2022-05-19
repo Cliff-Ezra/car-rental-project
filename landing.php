@@ -157,9 +157,10 @@ function getData($sql)
     <div class="choose-container">
 
         <div class="choose-heading">
-            <h2>Why Choose Us</h2>
+            <h2>We are Located At</h2>
             <div class="choose-text">
-                <span>Explore Our First Class Rental Service</span>
+                <span>Mvuli Avenue Along Ngong Road</span>
+                <span> <a href="https://goo.gl/maps/ho7PECZfEuqJKwpLA">Click Here!</a> </span>
             </div>
         </div>
 

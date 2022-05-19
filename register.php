@@ -13,7 +13,7 @@ if (isset($_POST['signup'])) {
     $_SESSION['email']     = $email;
 
     $conn = $pdo->connect();
- 
+
     $now = date('Y-m-d');
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -21,19 +21,20 @@ if (isset($_POST['signup'])) {
     try {
         $stmt = $conn->prepare(
             "INSERT INTO user (email, password, first_name, last_name, telephone, created_at) 
-            VALUES (:email, :password, :first_name, :last_name, :telephone, :created_at)");
+            VALUES (:email, :password, :first_name, :last_name, :telephone, :created_at)"
+        );
 
         $stmt->execute([
-            'email'      => $email, 
-            'password'   => $hashedPassword, 
-            'first_name' => $firstName, 
-            'last_name'  => $lastName, 
-            'telephone'  => $telephone, 
+            'email'      => $email,
+            'password'   => $hashedPassword,
+            'first_name' => $firstName,
+            'last_name'  => $lastName,
+            'telephone'  => $telephone,
             'created_at' => $now
         ]);
 
         $userid = $conn->lastInsertId();
-        header('location: ./landing.php');
+        header('location: ./check.php');
     } catch (PDOException $e) {
         $_SESSION['error'] = $e->getMessage();
         echo $e;

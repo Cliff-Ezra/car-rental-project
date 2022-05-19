@@ -1,7 +1,7 @@
 <?php
-include './include/session.php';
+// include './include/session.php';
 
-if (isset($_POST['booking'])) {
+if (isset($_POST['confirm'])) {
     $days     = $_POST['days'];
     $date  = $_POST['date'];
     $modelID = $_POST['model_id'];
@@ -10,7 +10,7 @@ if (isset($_POST['booking'])) {
 
     $now = date('Y-m-d');
 
-    // *For obtaining price
+    // !For obtaining price
     try {
         $stmt = $conn->prepare(
             "SELECT price, name FROM rental.models WHERE model_id = :model_id"
@@ -22,7 +22,7 @@ if (isset($_POST['booking'])) {
         echo $e;
     }
 
-    // *For obtaining model name
+    // !For obtaining model name
     try {
         $stmt = $conn->prepare(
             "SELECT name FROM rental.models WHERE model_id = :model_id"
@@ -34,7 +34,7 @@ if (isset($_POST['booking'])) {
         echo $e;
     }
 
-    // For obtaining total price
+    // !For obtaining total price
     // try {
     //     $stmt = $conn->prepare(
     //         "SELECT * FROM rental.bookings WHERE booking_id = :booking_id"

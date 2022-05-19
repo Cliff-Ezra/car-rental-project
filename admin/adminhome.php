@@ -38,19 +38,36 @@ include './include2/session.php';
         <div class="row">
 
             <div class="container-sales">
-                <span class="value">Ksh. 35,800k</span>
-                <span class="content">Total Sales</span>
+                <a href="./unapproved_orders.php">
+                    <?php
+                    $stmt = $conn->prepare("SELECT * FROM bookings");
+                    $stmt->execute();
+
+                    $total = 0;
+                    foreach ($stmt as $row) {
+                        $subtotal = $row['price'] * $row['days'];
+                        $total += $subtotal;
+                    }
+
+                    echo "<span class='value'> $total </span>"
+                    ?>
+                    <br><br>
+                    <span class="content">Total Sales</span>
+                </a>
             </div>
 
             <div class="container-products">
-                <?php
-                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM categories");
-                $stmt->execute();
-                $row = $stmt->fetch();
+                <a href="./categories.php">
+                    <?php
+                    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM categories");
+                    $stmt->execute();
+                    $row = $stmt->fetch();
 
-                echo "<span class='value'>" . $row['numrows'] . "</span>"
-                ?>
-                <span class="content">Number of Car Categories</span>
+                    echo "<span class='value'>" . $row['numrows'] . "</span>"
+                    ?>
+                    <br><br>
+                    <span class="content">Number of Car Categories</span>
+                </a>
             </div>
 
         </div>
@@ -58,25 +75,31 @@ include './include2/session.php';
         <div class="row">
 
             <div class="container-users">
-                <?php
-                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM user");
-                $stmt->execute();
-                $row = $stmt->fetch();
+                <a href="./users.php">
+                    <?php
+                    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM user");
+                    $stmt->execute();
+                    $row = $stmt->fetch();
 
-                echo "<span class='value'>" . $row['numrows'] . "</span>"
-                ?>
-                <span class="content">Number of Users</span>
+                    echo "<span class='value'>" . $row['numrows'] . "</span>"
+                    ?>
+                    <br><br>
+                    <span class="content">Number of Users</span>
+                </a>
             </div>
 
             <div class="container-categories">
-                <?php
-                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM models");
-                $stmt->execute();
-                $row = $stmt->fetch();
+                <a href="./categories.php">
+                    <?php
+                    $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM models");
+                    $stmt->execute();
+                    $row = $stmt->fetch();
 
-                echo "<span class='value'>" . $row['numrows'] . "</span>"
-                ?>
-                <span class="content">Number of Car Models</span>
+                    echo "<span class='value'>" . $row['numrows'] . "</span>"
+                    ?>
+                    <br><br>
+                    <span class="content">Number of Car Models</span>
+                </a>
             </div>
 
         </div>

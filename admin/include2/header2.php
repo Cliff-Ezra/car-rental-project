@@ -31,7 +31,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../admin/users.php" class="nav-link">
+                <a href="../admin/system_users.php" class="nav-link">
                     <img src="./svg/01user.svg" height="50rem" width="50rem" alt="">
                     <span class="link-text">
                         Users
@@ -45,11 +45,17 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="../admin/unapproved_orders.php" class="nav-link">
+                    <img src="./svg/booking.svg" height="50rem" width="50rem" alt="">
+                    <span class="link-text">Bookings</span>
+                </a>
+            </li>
+            <!-- <li class="nav-item">
                 <a href="#" class="nav-link">
                     <img src="./svg/05chat.svg" height="50rem" width="50rem" alt="">
                     <span class="link-text">Comments</span>
                 </a>
-            </li>
+            </li> -->
         </ul>
 
     </nav>
