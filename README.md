@@ -17,22 +17,22 @@ This is a car rental project for G Car Wash. It consists of 2 modules; a User Mo
  
  # Below are some screenshots of the system
  ## User Landing Page
- <img src="./REDME INFO/User Landing Page.png">
+ <img src="./README INFO/User Landing Page.png">
  
  ## User Laning Page 2
- <img src="./REDME INFO/ULanding Page 2.png">
+ <img src="./README INFO/ULanding Page 2.png">
  
  ## User Booking Page 
- <img src="./REDME INFO/User Booking Page 1.png">
+ <img src="./README INFO/User Booking Page 1.png">
  
  ## User Booking Page 2
- <img src="./REDME INFO/User Booking Page 2.png">
+ <img src="./README INFO/User Booking Page 2.png">
  
  ## Admin Dashboard
- <img src="./REDME INFO/Admin Dashboard.png">
+ <img src="./README INFO/Admin Dashboard.png">
  
  ## Admin Booking Managmenent
- <img src="./REDME INFO/Admin Booking Management.png">
+ <img src="./README INFO/Admin Booking Management.png">
  
  ## Admin User Categories
- <img src="./REDME INFO/Admin User Categories.png">
+ <img src="./README INFO/Admin User Categories.png">
