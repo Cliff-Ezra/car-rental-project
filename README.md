@@ -4,15 +4,20 @@ This is a car rental project for G Car Wash. It consists of 2 modules; a User Mo
 
 ## User Module
  -> The user is able to carry create a profile by inserting their details such as name, email & password.
+ 
  -> The user is to fill out a background check that is vetted by the administrator to allow the user to book.
+ 
  -> The user is able to book vehicles on a brand basis. i.e. Mercedes, Audi etc. 
+ 
  -> The user is able to comment on each specific car model that they are interested in booking.
  
  ## Admin Module
  -> The admin is able to view statistics concerning the number of car brands, models and users available.
+ 
  -> The admin is able to view statistics concerning the total number of sales that have been made.
- -> The admin is able to edit each car brand and model that is available and the changes are reflected 
-      onto the user module due to the dynamism of the web application.
+ 
+ -> The admin is able to edit each car brand and model that is available and the changes are reflected onto the user module due to the dynamism of the web application.
+ 
  -> The admin is able to verify the payment of booked cars or reject bookings
  
  # Below are some screenshots of the system
